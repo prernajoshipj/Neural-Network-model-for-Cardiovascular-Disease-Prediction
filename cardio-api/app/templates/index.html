@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Prediction</title>
+</head>
+<body>
+    <h2>Cardiovascular Disease Prediction</h2>
+    <form method="POST">
+        <label>Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label>Gender (1=Female, 2=Male):</label>
+        <input type="number" name="gender" required><br>
+
+        <label>Height (cm):</label>
+        <input type="number" name="height" required><br>
+
+        <label>Weight (kg):</label>
+        <input type="number" step="0.1" name="weight" required><br>
+
+        <label>Systolic BP:</label>
+        <input type="number" name="ap_hi" required><br>
+
+        <label>Diastolic BP:</label>
+        <input type="number" name="ap_lo" required><br>
+
+        <label>Smoker (1=Yes, 0=No):</label>
+        <input type="number" name="smoke" required><br>
+
+        <label>Alcohol Intake (1=Yes, 0=No):</label>
+        <input type="number" name="alco" required><br>
+
+        <label>Physical Activity (1=Yes, 0=No):</label>
+        <input type="number" name="active" required><br>
+
+        <label>Glucose Level (gluc_2):</label>
+        <input type="number" name="gluc_2" required><br>
+
+        <label>Glucose Level (gluc_3):</label>
+        <input type="number" name="gluc_3" required><br>
+
+        <label>Cholesterol Level (cholesterol_2):</label>
+        <input type="number" name="cholesterol_2" required><br>
+
+        <label>Cholesterol Level (cholesterol_3):</label>
+        <input type="number" name="cholesterol_3" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h3>Prediction: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
